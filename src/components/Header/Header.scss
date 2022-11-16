@@ -5,13 +5,9 @@ $glitch-bg-color: $bg-color;
 
 #title {
   margin: 0 auto;
-  font-family: "Press Start 2P", cursive;
-  font-size: 32px;
-  font-weight: bold;
   padding: 5vmin;
-  color: #a5a5ff;
-  background-color: $bg-color;
   text-align-last: center;
+  background: red;
 }
 
 /* unvisited link */
@@ -46,12 +42,12 @@ a:active {
   width: 100%;
 }
 
-h1 {
-  display: block;
-  font-size: 3em;
-  margin: 0.6em 0;
-  font-weight: bold;
-}
+// h1 {
+//   display: block;
+//   font-size: 3em;
+//   margin: 0.6em 0;
+//   font-weight: bold;
+// }
 
 .glitch {
   position: relative;
