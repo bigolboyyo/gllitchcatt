@@ -26,7 +26,6 @@ function GlitchMenu() {
       50
     )}vh ${randomNumber(0, 1)}px ${randomNumber(0, 1)}px #fff,`;
   }
-  console.log(result.substring(0, result.length - 1));
 
   return (
     <Container
@@ -45,6 +44,8 @@ function GlitchMenu() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        position: "relative",
+        zIndex: 100,
       }}
     >
       <div className="stars"></div>
