@@ -17,7 +17,7 @@ function GlitchMenu() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "space-evenly",
         paddingBottom: "5vmax",
         backgroundImage: `URL(${bkg})`,
         backgroundSize: "cover",
