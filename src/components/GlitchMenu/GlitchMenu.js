@@ -1,5 +1,6 @@
 import React from "react";
 import Buttons from "./Buttons";
+import Title from "../Title/Title";
 
 import bkg from "../../images/tmp_bkg.jpg";
 
@@ -15,14 +16,16 @@ function GlitchMenu() {
         height: "100vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-around",
         alignItems: "center",
-        paddingBottom: "20vh",
+        justifyContent: "space-between",
+        paddingBottom: "5vmax",
         backgroundImage: `URL(${bkg})`,
-        // backgroundSize: "cover",
-        backgroundRepeat: "round",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
     >
+      <Title />
       <Buttons />
     </Container>
   );
