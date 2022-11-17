@@ -7,7 +7,7 @@ function Header() {
   return (
     <Container fluid="true" disableGutters={true} maxWidth={false}>
       <h1 id="title">
-        <span className="glitch" data-text="GLLITCHCATT">
+        <span className="glitch" id="main-glitch" data-text="GLLITCHCATT">
           GLLITCHCATT
         </span>
       </h1>

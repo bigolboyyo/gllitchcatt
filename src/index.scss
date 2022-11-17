@@ -1,8 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
-$bg-color: #4242e6;
-$glitch-bg-color: $bg-color;
-
 html,
 #root,
 body {
@@ -15,6 +12,7 @@ body {
   font-family: "Press Start 2P", cursive;
   font-size: clamp(3vmin, 3em, 3vmax);
   font-weight: bold;
+  color: black;
 }
 
 // FIXME: Glitch Animation
@@ -47,7 +45,7 @@ a:active {
 .glitch {
   position: relative;
   margin: 0 auto;
-  background: $glitch-bg-color;
+  background: #bfbfbda5;
   padding: 3vmin;
   border-radius: 30px;
 }
@@ -71,7 +69,7 @@ a:active {
   animation-duration: 4s;
   left: 4px;
   text-shadow: -1px 0 #ffa800;
-  background: $glitch-bg-color;
+  background: #bfbfbda5;
   padding: 3vmin;
   border-radius: 30px;
 }
@@ -81,7 +79,7 @@ a:active {
   animation-duration: 6s;
   left: -4px;
   text-shadow: 1px 0 #00d8ff;
-  background: $glitch-bg-color;
+  background: #bfbfbda5;
   padding: 3vmin;
   border-radius: 30px;
 }
