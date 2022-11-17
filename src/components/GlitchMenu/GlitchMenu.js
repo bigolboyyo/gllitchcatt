@@ -3,11 +3,13 @@ import { useState } from "react";
 import Title from "../Title/Title";
 import "./GlitchMenu.css";
 import VerticalButtons from "./Buttons/VerticalButtons";
+import HorizontalButtons from "./Buttons/HorizontalButtons";
+
+import Portfolio from "../Portfolio/Portfolio";
 
 import bkg from "../../images/tmp_bkg.jpg";
 
 import { Container } from "@mui/material";
-import HorizontalButtons from "./Buttons/HorizontalButtons";
 
 function GlitchMenu() {
   const [buttonSwitch, setButtonSwitch] = useState(false);
@@ -37,7 +39,10 @@ function GlitchMenu() {
           setButtonSwitch={setButtonSwitch}
         />
       ) : (
-        <HorizontalButtons />
+        <>
+          <HorizontalButtons />
+          <Portfolio />
+        </>
       )}
     </Container>
   );
