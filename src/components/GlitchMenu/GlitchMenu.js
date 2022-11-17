@@ -14,6 +14,20 @@ import { Container } from "@mui/material";
 function GlitchMenu() {
   const [buttonSwitch, setButtonSwitch] = useState(false);
 
+  function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  const STAR_COUNT = 400;
+  let result = "";
+  for (let i = 0; i < STAR_COUNT; i++) {
+    result += `${randomNumber(-50, 50)}vw ${randomNumber(
+      -50,
+      50
+    )}vh ${randomNumber(0, 1)}px ${randomNumber(0, 1)}px #fff,`;
+  }
+  console.log(result.substring(0, result.length - 1));
+
   return (
     <Container
       fluid="true"
@@ -26,12 +40,14 @@ function GlitchMenu() {
         alignItems: "center",
         justifyContent: buttonSwitch ? "none" : "space-evenly",
         paddingBottom: "3vmax",
-        backgroundImage: `URL(${bkg})`,
+        // backgroundImage: `URL(${bkg})`,
+        backgroundColor: "#000",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
     >
+      <div className="stars"></div>
       <Title />
       {!buttonSwitch ? (
         <VerticalButtons
