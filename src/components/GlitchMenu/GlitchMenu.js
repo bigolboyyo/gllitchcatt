@@ -1,6 +1,8 @@
 import React from "react";
 import Buttons from "./Buttons";
 
+import bkg from "../../images/tmp_bkg.jpg";
+
 import { Container } from "@mui/material";
 
 function GlitchMenu() {
@@ -16,6 +18,9 @@ function GlitchMenu() {
         justifyContent: "space-around",
         alignItems: "center",
         paddingBottom: "17.5vh",
+        backgroundImage: `URL(${bkg})`,
+        backgroundSize: "contain",
+        backgroundRepeat: "round",
       }}
     >
       <Buttons />
