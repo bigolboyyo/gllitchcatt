@@ -1,0 +1,8 @@
+.button-bar {
+  scale: clamp(0.1, 0.4, 0.5);
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 25vmin;
+}

@@ -1,20 +1,20 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-function Buttons() {
+function VerticalButtons({ buttonSwitch, setButtonSwitch }) {
   return (
     <>
-      <Button>
+      <Button onClick={() => setButtonSwitch(!buttonSwitch)}>
         <span className="glitch" data-text="PORTFOLIO">
           PORTFOLIO
         </span>
       </Button>
-      <Button>
+      <Button onClick={() => setButtonSwitch(!buttonSwitch)}>
         <span className="glitch" data-text="SHOP">
           SHOP
         </span>
       </Button>
-      <Button>
+      <Button onClick={() => setButtonSwitch(!buttonSwitch)}>
         <span className="glitch" data-text="ABOUT">
           ABOUT
         </span>
@@ -23,4 +23,4 @@ function Buttons() {
   );
 }
 
-export default Buttons;
+export default VerticalButtons;

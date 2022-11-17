@@ -1,12 +1,17 @@
 import React from "react";
-import Buttons from "./Buttons";
+import { useState } from "react";
 import Title from "../Title/Title";
+import "./GlitchMenu.css";
+import VerticalButtons from "./Buttons/VerticalButtons";
 
 import bkg from "../../images/tmp_bkg.jpg";
 
 import { Container } from "@mui/material";
+import HorizontalButtons from "./Buttons/HorizontalButtons";
 
 function GlitchMenu() {
+  const [buttonSwitch, setButtonSwitch] = useState(false);
+
   return (
     <Container
       fluid="true"
@@ -17,8 +22,8 @@ function GlitchMenu() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "space-evenly",
-        paddingBottom: "5vmax",
+        justifyContent: buttonSwitch ? "none" : "space-evenly",
+        paddingBottom: "3vmax",
         backgroundImage: `URL(${bkg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -26,7 +31,14 @@ function GlitchMenu() {
       }}
     >
       <Title />
-      <Buttons />
+      {!buttonSwitch ? (
+        <VerticalButtons
+          buttonSwitch={buttonSwitch}
+          setButtonSwitch={setButtonSwitch}
+        />
+      ) : (
+        <HorizontalButtons />
+      )}
     </Container>
   );
 }
