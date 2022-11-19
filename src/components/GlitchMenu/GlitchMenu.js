@@ -77,7 +77,7 @@ function GlitchMenu() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: activeTab ? "none" : "space-evenly",
-          paddingBottom: "3vmax",
+          // paddingBottom: "3vmax",
           // backgroundImage: `URL(${bkg})`,
           backgroundColor: "#000",
           backgroundSize: "cover",
