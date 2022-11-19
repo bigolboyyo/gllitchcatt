@@ -5,7 +5,9 @@
   flex-direction: row;
   justify-content: space-around;
   gap: 25vmin;
-  transform: translateY(-20vmin);
+  transform: translateY(-10vmin);
+
+  /* border: double orange; */
 }
 
 .stars {

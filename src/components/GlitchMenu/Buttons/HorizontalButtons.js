@@ -7,18 +7,18 @@ function HorizontalButtons() {
     <div className="button-bar">
       <>
         <Button>
-          <span className="glitch" data-text="PORTFOLIO">
-            PORTFOLIO
-          </span>
-        </Button>
-        <Button>
-          <span className="glitch" data-text="SHOP">
-            SHOP
+          <span className="glitch" data-text="GALLERY">
+            GALLERY
           </span>
         </Button>
         <Button>
           <span className="glitch" data-text="ABOUT">
             ABOUT
+          </span>
+        </Button>
+        <Button>
+          <span className="glitch" data-text="CONTACT">
+            CONTACT
           </span>
         </Button>
       </>

@@ -6,6 +6,7 @@
   backdrop-filter: blur(2.5px);
   -webkit-backdrop-filter: blur(2.5px);
   border-radius: 10px;
+  /* border: solid blue; */
 }
 
 #main-glitch {

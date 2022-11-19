@@ -3,80 +3,80 @@ import "./Portfolio.css";
 
 import { ImageList } from "@mui/material";
 import { ImageListItem } from "@mui/material";
-import squid from "../../images/squid32.gif";
+// import squid from "../../images/squid32.gif";
 // import { Container } from "@mui/system";
-// import bkg from "../../images/tmp_bkg.jpg";
+import bkg from "../../images/tmp_bkg.jpg";
 // import { jsx, css } from "@emotion/react";
 
 const itemData = [
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
   },
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
   },
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
   },
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
   },
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
   },
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
   },
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
   },
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
   },
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
   },
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
   },
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
   },
   {
-    img: squid,
+    img: bkg,
     title: "Fun title",
     author: "Cool author",
     cols: 1,
@@ -85,28 +85,20 @@ const itemData = [
 
 function Portfolio() {
   return (
-    // <Container
-    //   fluid="true"
-    //   sx={{
-    //     // width: "100vmax",
-    //     border: "solid red",
-    //   }}
-    // >
     <ImageList
       cols={2}
       rowHeight="auto"
-      gap={100}
+      //   gap={100}
       sx={{
         width: "-webkit-fill-available",
         zIndex: "-1",
         position: "absolute",
-        top: 0,
+        top: "12vmax",
         left: 0,
         justifyItems: "center",
         height: "-webkit-fill-available",
-        border: "solid green",
-        padding: "20vmin 10vmin 10vmin 10vmin",
-        // gap: "100px",
+        // border: "solid green",
+        padding: "5vmin 10vmin 2.5vmin 10vmin",
       }}
       loading="lazy"
     >
@@ -115,18 +107,17 @@ function Portfolio() {
           key={item.img + i}
           cols={item.cols || 1}
           sx={{
-            //   left: 0,
-            border: "solid red",
-            // paddingTop: "5vmin",
-            //   width: "50vmax",
-            // gap: 100,
+            // border: "dotted red",
+            width: "clamp(15vw, 30vw, 35vw)",
+            // paddingTop: "3vmax",
+            // margin: 0,
+            paddingBottom: "15vmax",
           }}
         >
           <img src={item.img} alt={item.title} />
         </ImageListItem>
       ))}
     </ImageList>
-    // </Container>
   );
 }
 
