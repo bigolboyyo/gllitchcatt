@@ -1,20 +1,20 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-function VerticalButtons({ buttonSwitch, setButtonSwitch }) {
+function VerticalButtons({ activeTab, setActiveTab }) {
   return (
     <>
-      <Button onClick={() => setButtonSwitch(!buttonSwitch)}>
+      <Button onClick={(e) => setActiveTab(e.target.textContent)}>
         <span className="glitch" data-text="GALLERY">
           GALLERY
         </span>
       </Button>
-      <Button onClick={() => setButtonSwitch(!buttonSwitch)}>
+      <Button onClick={(e) => setActiveTab(e.target.textContent)}>
         <span className="glitch" data-text="ABOUT">
           ABOUT
         </span>
       </Button>
-      <Button onClick={() => setButtonSwitch(!buttonSwitch)}>
+      <Button onClick={(e) => setActiveTab(e.target.textContent)}>
         <span className="glitch" data-text="CONTACT">
           CONTACT
         </span>

@@ -2,21 +2,25 @@ import { Button } from "@mui/material";
 
 import React from "react";
 
-function HorizontalButtons() {
+function HorizontalButtons({ activeTab, setActiveTab }) {
+  const handleClick = (e) => {
+    setActiveTab(e.target.textContent);
+  };
+
   return (
     <div className="button-bar">
       <>
-        <Button>
+        <Button onClick={(e) => handleClick(e)}>
           <span className="glitch" data-text="GALLERY">
             GALLERY
           </span>
         </Button>
-        <Button>
+        <Button onClick={(e) => handleClick(e)}>
           <span className="glitch" data-text="ABOUT">
             ABOUT
           </span>
         </Button>
-        <Button>
+        <Button onClick={(e) => handleClick(e)}>
           <span className="glitch" data-text="CONTACT">
             CONTACT
           </span>

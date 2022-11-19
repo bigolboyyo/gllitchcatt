@@ -1,5 +1,5 @@
 import React from "react";
-import "./Portfolio.css";
+import "./Gallery.css";
 
 import { ImageList } from "@mui/material";
 import { ImageListItem } from "@mui/material";

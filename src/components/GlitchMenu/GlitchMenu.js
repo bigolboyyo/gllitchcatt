@@ -1,37 +1,69 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Title from "../Title/Title";
 import "./GlitchMenu.css";
 import VerticalButtons from "./Buttons/VerticalButtons";
 import HorizontalButtons from "./Buttons/HorizontalButtons";
 
-import Portfolio from "../Portfolio/Portfolio";
-
 import bkg from "../../images/tmp_bkg.jpg";
+import Gallery from "../Gallery/Gallery";
+import About from "../About/About";
+import Contact from "../Contact/Contact";
 
 import { Container } from "@mui/material";
 
 function GlitchMenu() {
   const [buttonSwitch, setButtonSwitch] = useState(false);
+  const [activeTab, setActiveTab] = useState(false);
 
   function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  // const createStars = () => {
-  //   const STAR_COUNT = 400;
-  //   let result = "";
-  //   for (let i = 0; i < STAR_COUNT; i++) {
-  //     result += `${randomNumber(-50, 50)}vw ${randomNumber(
-  //       -50,
-  //       50
-  //     )}vh ${randomNumber(0, 1)}px ${randomNumber(0, 1)}px #fff,`;
-  //   }
-  //   // console.log(result);
-  //   return result;
-  // };
+  const handleTab = () => {
+    if (!activeTab) {
+      return (
+        <VerticalButtons activeTab={activeTab} setActiveTab={setActiveTab} />
+      );
+    }
+    if (activeTab === "GALLERY") {
+      return (
+        <>
+          <Gallery />
+          <HorizontalButtons
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+        </>
+      );
+    }
+    if (activeTab === "ABOUT") {
+      return (
+        <>
+          <HorizontalButtons
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+          <About />
+        </>
+      );
+    }
+    if (activeTab === "CONTACT") {
+      return (
+        <>
+          <HorizontalButtons
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+          <Contact />
+        </>
+      );
+    }
+  };
 
-  // createStars();
+  useEffect(() => {
+    handleTab();
+  }, [activeTab]);
 
   return (
     <>
@@ -44,7 +76,7 @@ function GlitchMenu() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: buttonSwitch ? "none" : "space-evenly",
+          justifyContent: activeTab ? "none" : "space-evenly",
           paddingBottom: "3vmax",
           // backgroundImage: `URL(${bkg})`,
           backgroundColor: "#000",
@@ -58,17 +90,7 @@ function GlitchMenu() {
       >
         <div className="stars"></div>
         <Title />
-        {!buttonSwitch ? (
-          <VerticalButtons
-            buttonSwitch={buttonSwitch}
-            setButtonSwitch={setButtonSwitch}
-          />
-        ) : (
-          <>
-            <HorizontalButtons />
-            <Portfolio />
-          </>
-        )}
+        {handleTab()}
       </Container>
     </>
   );
